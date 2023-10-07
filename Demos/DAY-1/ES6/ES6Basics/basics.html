@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      //   if (true) {
+      //     let x = 100;
+      //     console.log(x);
+      //   }
+
+      //   console.log(x); // Error !
+      //   let x;
+      //   x = 100;
+
+      // after 1000 lines of code
+      //   let x; // error
+
+      // const - constant
+      //   const PI = 3.14;
+      //   PI = 3.14554; //error
+
+      //   const player = { name: "Neeraj Chopra", country: "INDIA" };
+      //   player.country = "Bharat";
+      //   //player = {}; // Error !
+
+      // Spread Operator works with Objects & Arrays
+      // Array
+      //   var cars = ["BMW", "AUDI", "MERC"];
+      // OR
+      //   var moreCars = new Array("TATA", "MAHINDRA");
+      //   var allCars = [...cars, ...moreCars];
+
+      // With Object
+      //   let person = { name: "Neeraj Chopra", details: { country: "INDIA" } };
+      //   let player = { ...person, trackEvent: "Javelin" };
+      //   person.details.country = "Bharat";
+
+      // Destructuring works with Objects & Arrays
+      // Array
+      //   var cars = ["BMW", "AUDI", "MERC"];
+      //   let firstCar = cars[0];
+      //   let secondCar = cars[1];
+
+      // OR
+      //   let [firstCar, , secondCar, thirdCar = "Dummy"] = cars;
+
+      // Objects
+      //   let player = {
+      //     name: "Neeraj Chopra",
+      //     country: "INDIA",
+      //     trackEvent: "Javelin",
+      //   };
+
+      //   //   let country = player.country;
+      //   //   let trackEvent = player.trackEvent;
+      //   // OR
+      //   let { trackEvent, country } = player;
+
+      //   let player = {
+      //     name: "Neeraj Chopra",
+      //     country: "INDIA",
+      //     details: {
+      //       trackEvent: "Javelin",
+      //       latestMedal: "Asian Games",
+      //       type: "Gold",
+      //     },
+      //   };
+      //   let anotherplayer = {
+      //     name: "Djokovic",
+      //     country: "Serbia",
+      //     details: {
+      //       trackEvent: "Tennis",
+      //       latestMedal: "French Open",
+      //     },
+      //   };
+
+      //   let {
+      //     details: { latestMedal, type },
+      //   } = player;
+
+      //   let {
+      //     details: { latestMedal: LatestTitle },
+      //   } = anotherplayer;
+
+      // usage
+
+      let player = {
+        name: "Neeraj Chopra",
+        country: "INDIA",
+        details: {
+          trackEvent: "Javelin",
+          latestMedal: "Asian Games",
+          type: "Gold",
+        },
+      };
+
+      function PrintPlayer({ name, country }) {
+        console.log(name + " represents " + country);
+      }
+
+      PrintPlayer(player);
+    </script>
+  </head>
+  <body></body>
+</html>
