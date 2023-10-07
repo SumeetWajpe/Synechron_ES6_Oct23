@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      //   var o = {}; // prototype is set to new Object()
+      //   var obj = Object.create(null);
+
+      //   var person = { name: "Nadal" };
+      //   var player = Object.create(person);
+
+      //   function Car() {
+      //     this.name = "BMW";
+      //     this.speed = 200;
+      //     this.accelerate = function () {
+      //       console.log(
+      //         "The car " + this.name + " is running @ " + this.speed + " kmph !",
+      //       );
+      //     };
+      //   }
+
+      //   function JamesBondCar() {
+      //     this.hasNitroPower = true;
+      //   }
+
+      //   JamesBondCar.prototype = new Car();
+      //   JamesBondCar.prototype.accelerate = function () {
+      //     console.log(
+      //       "The car " +
+      //         this.name +
+      //         " is running @ " +
+      //         this.speed +
+      //         " kmph , Nitropower ? " +
+      //         this.hasNitroPower,
+      //     );
+      //   };
+      //   var jbc = new JamesBondCar();
+      //   console.log(jbc.hasOwnProperty("name")); // false
+      //   console.log(jbc.hasOwnProperty("hasNitroPower")); // true
+
+      Date.prototype.getDayName = function () {
+        switch (this.getDay()) {
+          case 6:
+            return "Saturday";
+
+          default:
+            break;
+        }
+      };
+
+      var date = new Date();
+      console.log(date.getDayName());
+    </script>
+  </head>
+  <body></body>
+</html>

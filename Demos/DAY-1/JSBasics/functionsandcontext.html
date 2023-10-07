@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      //   function Test() {
+      //     console.log(this);
+      //   }
+      //   var testObj = new Test();
+
+      var person = {
+        name: "Romit",
+        greet: function (theGreeting) {
+          console.log(theGreeting + " " + this.name);
+        },
+      };
+      person.greet("Hello");
+
+      var anotherPerson = { name: "Rohit" };
+      // invoke greet on anotherPerson context
+      //   person.greet.call(anotherPerson, "Hey"); // immediate invocation
+
+      // apply - second parameter is array
+      //   person.greet.apply(anotherPerson, ["Hey"]); // immediate invocation
+
+      // bind
+      var greetBindedWithAnotherPerson = person.greet.bind(anotherPerson);
+      // 100 lines of code
+      greetBindedWithAnotherPerson("Hi");
+    </script>
+  </head>
+  <body></body>
+</html>

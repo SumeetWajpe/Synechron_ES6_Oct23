@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      var cars = ["BMW", "AUDI", "MERC"];
+      // OR
+      var moreCars = new Array("TATA", "MAHINDRA");
+
+      //   for (var key in cars) {
+      //     console.log(cars[key]);
+      //   }
+
+      //   for (var car of cars) {
+      //     console.log(car);
+      //   }
+
+      //   var smallCasedCars = cars.map(function (car) {
+      //     return car.toLowerCase();
+      //   });
+
+      //   var o1 = { name: "XYZ" };
+      //   var o2 = { name: "PQR" };
+      //   var arr = [o1, o2];
+      //   var changed = arr.map(function (o) {
+      //     o.name = "AAAA";
+      //     return o;
+      //   });
+
+      var index = cars.findIndex(function (car) {
+        return car == "MERC";
+      });
+
+      var theCar = cars.find(function (car) {
+        return car == "MERC";
+      });
+
+      var filteredCars = cars.filter(function (car) {
+        return car !== "MERC";
+      });
+    </script>
+  </head>
+  <body></body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      // Solution - 1
+      //   function CallBackToPrintSal() {
+      //     console.log(this.salary);
+      //   }
+      //   function Emp() {
+      //     this.salary = 200000;
+      //     setTimeout(CallBackToPrintSal.bind(this), 2000);
+      //   }
+
+      // Solution - 2
+
+      function Emp() {
+        this.salary = 200000;
+        var _this = this;
+        setTimeout(function () {
+          console.log(_this.salary);
+        }, 2000);
+      }
+      var empObj = new Emp();
+    </script>
+  </head>
+  <body></body>
+</html>

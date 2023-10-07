@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      //   //1. Function declaration syntax
+
+      //   PrintBook("Dr. APJ Abdul Kalam", "Wings Of Fire"); // Can use this due to function Hoisting
+
+      //   function PrintBook(author, title) {
+      //     console.log(author, title);
+      //   }
+
+      //   PrintBook("Dr. APJ Abdul Kalam", "Wings Of Fire");
+
+      //2. Function as an expression syntax
+      //   PrintBook("Dr. APJ Abdul Kalam", "Wings Of Fire");// Error as only variable printbook gets hoisted
+
+      //   var PrintBook = function (author, title) {
+      //     console.log(author, title);
+      //   };
+      //   PrintBook("Dr. APJ Abdul Kalam", "Wings Of Fire");
+
+      // 3. Function Object
+      //   var PrintBook = new Function(
+      //     "author",
+      //     "title",
+      //     "console.log(author, title)",
+      //   );
+
+      //   PrintBook("Dr. APJ Abdul Kalam", "Wings Of Fire");
+
+      // IIFE - Immediately Invocable Function Expression
+
+      //   (function (msg) {
+      //     console.log(msg);
+      //   })("IIFE Executed");
+
+      //   var result = (function (x, y) {
+      //     return x + y;
+      //   })(10, 20);
+
+      // Module Revealing Pattern
+      //   var MathModule = (function () {
+      //     var PI = 3.14;
+      //     function Product(x, y) {
+      //       return x * y;
+      //     }
+      //     function Add(x, y) {
+      //       return x + y;
+      //     }
+      //     return { Add: Add };
+      //   })();
+
+      // Nested Functions
+      function Outer() {
+        var anotherMsg = "Hi";
+        return function (msg) {
+          console.log(msg);
+          console.log(anotherMsg); // closure
+        };
+      }
+      var Inner = Outer();
+      Inner("Inner !");
+
+      function Counter() {
+        var x = 1;
+        return function () {
+          return x++;
+        };
+      }
+
+      var myCounter = Counter();
+      console.log(myCounter());
+      console.log(myCounter());
+      console.log(myCounter());
+
+    </script>
+  </head>
+  <body></body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      // 1.Object Literal Syntax
+      //   var player = {
+      //     name: "Carlos Alcaraz",
+      //     sport: "Tennis",
+      //     country: "Serbia",
+      //     age: 20,
+      //     isSeededNumberOne: true,
+      //     getDetails: function () {
+      //       console.log(this.name + " plays " + this.sport);
+      //     },
+      //   };
+      //   player.latestTitle = "Wimbledon";
+      //   player.getDetails();
+
+      //   var JSONData = JSON.stringify(player);
+      //   var jsObject = JSON.parse(JSONData);
+
+      // 2. using Object object
+      //   var player = new Object();
+      //   player.name = "Djokovic";
+      //   player.country = "Serbia";
+      //   player.getDetails = function () {
+      //     console.log(this.name + " represents " + this.country);
+      //   };
+
+      // 3. Constructor syntax
+
+      function Car() {
+        this.name = "BMW";
+        this.speed = 200;
+        this.accelerate = function () {
+          console.log(
+            "The car " + this.name + " is running @ " + this.speed + " kmph !",
+          );
+        };
+      }
+
+      var carObj = new Car();
+    </script>
+  </head>
+  <body></body>
+</html>
