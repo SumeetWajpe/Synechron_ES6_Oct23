@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      fetch("https://jsonplaceholder.typicode.com/posts")
+        .then(res => {
+          if (res.ok) {
+            return res.json();
+          } else {
+            throw new Error("Something went wrong !");
+          }
+        })
+        .then(posts => console.log(posts))
+        .then(() => console.log("This would also be executed"))
+        .catch(err => console.log(err))
+        .finally(() => console.log("Would always be executed !"));
+
+
+</script>
+  </head>
+  <body></body>
+</html>

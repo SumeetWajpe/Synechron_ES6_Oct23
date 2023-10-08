@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      // Default parameters
+      //   function PrintBook(
+      //     author = "Dummy",
+      //     title = "Dummy",
+      //     publication = "Dummy",
+      //   ) {
+      //     console.log(author, title, publication);
+      //   }
+
+      //   PrintBook();
+      //   PrintBook("Dr. APJ Abdul Kalam", "Ignited Minds", "Printwell");
+      //   PrintBook(undefined, "XYZ", "PQR");
+
+      // Rest parameters
+      //   function PrintBook(author, ...titles) {
+      //     console.log(author, titles);
+      //   }
+
+      //   PrintBook("Dr. APJ Abdul Kalam", "Wings Of Fire", "Ignited Minds", 200);
+
+      //   var Add = function (x, y) {
+      //     return x + y;
+      //   };
+      // OR
+      // Arrow Function
+      //   var Add = (x, y) => {
+      //     return x + y;
+      //   };
+
+      // OR
+      //   var Add = (x, y) => x + y;
+
+      //   console.log("The addition is " + Add(20, 30));
+
+      //   // Method with no parameter
+      //   var Test = () => console.log("Testing 1 2 3");
+      //   Test();
+      //   // method with single parameter
+      //   var Square = x => x * x;
+      //   console.log(Square(10));
+
+      //   let cars = ["BMW", "AUDI", "FERRARI"];
+      //   //   let lowercasedcars = cars.map(function (car) {
+      //   //     return car.toLowerCase();
+      //   //   });
+      //   // OR
+      //   let lowercasedcars = cars.map(car => car.toLowerCase());
+
+      function Emp() {
+        this.salary = 200000;
+        setTimeout(() => console.log(this.salary), 2000);
+      }
+      var empObj = new Emp();
+
+      var EmpAsArrow = () => {
+        this.salary = 300000;
+      };
+
+      EmpAsArrow();
+    </script>
+  </head>
+  <body></body>
+</html>

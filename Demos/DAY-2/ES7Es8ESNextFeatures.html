@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      let expo = 10 ** 5; // exponential operator
+      let javascript = "Java";
+      //   console.log(javascript.padStart(10, "*"));
+      console.log(javascript.padEnd(10, "*"));
+
+      // let player = {name:"XYZ",} // trailing commas are now allowed
+      let player = {
+        name: "Neeraj Chopra",
+        country: "INDIA",
+        trackEvent: "Javelin",
+      };
+      let { country, ...restProperties } = player; // rest properties
+
+      // null coallising operator
+      let b = null;
+      //   console.log(b || "Dummy"); // if b is any falsy value (0,"",false) Dummy will be displayed
+      console.log(b ?? "Dummy"); // only if b is null or undefined then "Dummy" will be displayed
+    </script>
+  </head>
+  <body></body>
+</html>

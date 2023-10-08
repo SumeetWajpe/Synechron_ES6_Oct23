@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      class Car {
+        // static carMake = 1983;
+        constructor(name = "BMW", speed = 200) {
+          this.name = name;
+          this.speed = speed;
+        }
+        accelerate() {
+          //   return (
+          //     "The car " + this.name + " is running at " + this.speed + " kmph !"
+          //   );
+          return `The car ${this.name} is running at ${this.speed} kmph !`;
+        }
+      }
+
+      class JamesBondCar extends Car {
+        hasNitroPower = true;
+        constructor(name, speed, nitroPower = true) {
+          super(name, speed);
+          this.hasNitroPower = nitroPower;
+        }
+        accelerate() {
+          return (
+            super.accelerate() + " Can use nitro power ? " + this.hasNitroPower
+          );
+        }
+      }
+
+      // var carObj = new Car();
+      // Car.carMake
+      //   console.log(carObj.accelerate());
+
+      var jbc = new JamesBondCar("Aston Martin", 300, true);
+      console.log(jbc.accelerate());
+
+      let str = `
+      First Line 
+      Second Line
+      Last Line`;
+      console.log(str);
+    </script>
+  </head>
+  <body></body>
+</html>
